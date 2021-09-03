@@ -89,15 +89,15 @@ main section form input {
     border: solid rgb(187, 186, 186);
 }
 
+.intro {
+    display: block;
+}
+
 .quiz {
     display: none;
     padding:0 5px 0 75px;
     width: 75%;
     text-align: start;
-}
-
-.intro {
-    display: none;
 }
 
 .question{
@@ -147,6 +147,7 @@ main section form input {
 }
 
 .results {
+    display: none;
     text-align: start;
     padding: 0;
     width: 65%;
