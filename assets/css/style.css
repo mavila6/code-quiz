@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    padding: 10px 25px;
+    padding: 10px 25px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,5 +35,80 @@ header p {
     font-weight: bold;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+main section {
+    padding: 15px 120px; 
+}
+
+main section h1 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+main section p {
+    font-size: 17px;
+}
+
+main section button {
+    background-color: var(--darkPurple);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    margin-top: 5px;
+}
+
+main section button:hover {
+    background-color: var(--lightPurple);
+}
+
+main section button:active {
+    color: black;
+}
+
+.quiz {
+    display: block;
+    padding:0 5px 0 75px;
+    width: 75%;
+}
+
+.intro {
+    display: none;
+}
+
+.question{
+    font-size: 25px;
+    text-align: start;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0;
+}
+
+.btn {
+    width: 25%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 7.5px;
+    font-size: 20px;
+}
+
+.num {
+    padding: 0;
+}
+
+.answer {
+    text-align: start;
+    width: 100%;
+    padding: 0 0 0 10px;
+}
 
 

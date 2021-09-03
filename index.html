@@ -15,20 +15,30 @@
 <body>
     <!-- Header of body containing the high scores link and time remaining -->
     <header>
-        <a href="">View High Scores</a>
+        <a href="">View high scores</a>
         <p>Time: 0</p>
     </header>
     <!-- Main section of body containing the intro, questions, and final score -->
     <main>
         <!-- Introduction section for code quiz -->
-        <section>
+        <section class="intro">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer all the questions within the time limit. Any wrong answers will subtract 10 seconds from your time. Good Luck!</p>
             <button>Start Quiz</button>
         </section>
         <!-- Quiz section with the question and answers -->
+        <section class="quiz">
+            <h1 class="question">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid officia nulla quae dicta est autem?
+            </h1>
+            <button class="btn" id="b1"><p class="num">1.</p><p class="answer">Lorem, ipsum.</p></button>
+            <button class="btn" id="b2"><p class="num">2.</p><p class="answer">Lorem, ipsum.</p></button>
+            <button class="btn" id="b3"><p class="num">3.</p><p class="answer">Lorem, ipsum.</p></button>
+            <button class="btn" id="b4"><p class="num">4.</p><p class="answer">Lorem, ipsum.</p></button>
+        </section>
+        <!-- Section containing the correct/wrong -->
         <section>
-
+            <p></p>
         </section>
     </main>
 </body>
