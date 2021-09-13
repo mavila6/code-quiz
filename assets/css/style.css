@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     padding: 10px;
     margin: 0;
@@ -8,6 +8,7 @@
 :root {
     --darkPurple: rgb(53, 28, 117);
     --lightPurple: rgb(189, 96, 231);
+    --lightGrey: rgb(187, 186, 186);
 }
 
 body {
@@ -86,7 +87,7 @@ main section form input {
     margin-right: 10px;
     width: 35%;
     height: 45px;
-    border: solid rgb(187, 186, 186);
+    border: solid var(--lightGrey);
 }
 
 .intro {
@@ -117,10 +118,6 @@ main section form input {
     font-size: 20px;
 }
 
-.num {
-    padding: 0;
-}
-
 .answer {
     width: 100%;
     padding: 0 0 0 10px;
@@ -140,9 +137,9 @@ main section form input {
 }
 
 .good, .bad {
-    border-top: solid rgb(187, 186, 186);
+    border-top: solid var(--lightGrey);
     padding: 5px 0 0 25px;
-    color: rgb(187, 186, 186);
+    color: var(--lightGrey);
     font-size: 25px;
 }
 
