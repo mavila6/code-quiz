@@ -8,15 +8,17 @@ const prompt = document.querySelector('.prompt');
 const correct = document.querySelector('.good');
 const wrong = document.querySelector('.bad');
 const results = document.querySelector('.results');
-const finalScore = document.querySelector('.score');
 const countdown = document.querySelector('.countdown');
 const gameEnd = document.querySelector('.gameOver');
+const initials = document.querySelector('#initials');
+const submitBtn = document.querySelector('.submit');
 let currentQ;
 let score;
 let timeLeft = 75;
 
 // Event Listener
 startBtn.addEventListener('click', start);
+submitBtn.addEventListener('click', saveScore);
 
 // Start the quiz and call timer function
 function start() {
@@ -92,8 +94,14 @@ function gameOver(){
     results.setAttribute('style', 'display: block');
     countdown.setAttribute('style', 'display: none');
     gameEnd.setAttribute('style', 'display: block');
-    finalScore.textContent = 'Your final score is ' + score + '.';
 };
+
+// Function to save the highscore info and lead to high scores page
+function saveScore() {
+        localStorage.setItem('highScore', timeLeft);
+        localStorage.setItem('initial', initials.value);
+        window.location.replace('./scores.html');
+}
 
 // Questions Array Variable
 const questions = [
