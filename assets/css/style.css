@@ -90,6 +90,10 @@ main section form input {
     border: solid var(--lightGrey);
 }
 
+.gameOver {
+    display: none;
+}
+
 .intro {
     display: block;
 }
@@ -126,6 +130,7 @@ main section form input {
 .prompt {
     width: 100%;
     text-align: start;
+    display: block;
 }
 
 .good {

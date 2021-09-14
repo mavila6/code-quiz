@@ -4,11 +4,15 @@ const intro = document.querySelector('.intro');
 const quiz = document.querySelector('.quiz');
 const questionEl = document.querySelector('.question');
 const answerBtns = document.querySelector('.answers');
+const prompt = document.querySelector('.prompt');
 const correct = document.querySelector('.good');
 const wrong = document.querySelector('.bad');
 const results = document.querySelector('.results');
-const countdown = document.querySelector('#countdown');
-let currentQ 
+const finalScore = document.querySelector('.score');
+const countdown = document.querySelector('.countdown');
+const gameEnd = document.querySelector('.gameOver');
+let currentQ;
+let score;
 let timeLeft = 75;
 
 // Event Listener
@@ -21,17 +25,17 @@ function start() {
     countdown.textContent = 'Time:' + timeLeft;
     timer();
     currentQ = 0
-    displayQuestion(questions[currentQ]);
+    displayQuestion(questions[currentQ++]);
 };
 
 // Start Countdown Timer
 function timer() {
     let timeInterval = setInterval(function () {
-        timeLeft --;
         if (timeLeft >= 1) {
+            timeLeft --;
             countdown.textContent = 'Time: ' + timeLeft;
         } else {
-            countdown.textContent = 'Time Is Up!';
+            gameEnd.textContent = 'Time Is Up!';
             clearInterval(timeInterval);
             gameOver();
         }
@@ -64,18 +68,31 @@ function checkAnswer(event) {
         correct.setAttribute('style', 'display: none');
         wrong.setAttribute('style', 'display: block');
         timeLeft -= 10;
-    };
+    }
     nextQuestion();
 };
 
-// function to reset the questions after every answer an display next question
+// function to reset the questions after every answer and display next question
 function nextQuestion() {
-    console.log('yoooo')
+    while(answerBtns.firstChild) {
+        answerBtns.removeChild(answerBtns.firstChild);
+    }
+    if (currentQ < questions.length) {
+        displayQuestion(questions[currentQ++]);
+    } else {
+        gameOver();
+    }
 };
 
-// End of quiz function
+// End of quiz function to display the save score page
 function gameOver(){
-    console.log('game over');
+    score = timeLeft;
+    quiz.setAttribute('style', 'display: none');
+    prompt.setAttribute('style', 'display: none');
+    results.setAttribute('style', 'display: block');
+    countdown.setAttribute('style', 'display: none');
+    gameEnd.setAttribute('style', 'display: block');
+    finalScore.textContent = 'Your final score is ' + score + '.';
 };
 
 // Questions Array Variable
