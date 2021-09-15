@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata conatined in the head of html document -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the google font used for the html and the css stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -11,14 +13,18 @@
     <title>High Scores</title>
 </head>
 <body>
+    <!-- Main section of body containing the leaderboards -->
     <main class="highScores">
         <h1>High scores</h1>
+        <!-- Container for dynamically generated p elements -->
         <section id="topScores"></section>
+        <!-- Section for the clear and back buttons to cleaar highscores or lead back to main page -->
         <section class="clearScore">
             <button class="back" type="button">Go Back</button>
             <button id="clear" type="button">Clear high scores</button>
         </section>
     </main>
+    <!-- Link to the javascript file for this page -->
     <script src="assets/js/highScores.js"></script>
 </body>
 </html>

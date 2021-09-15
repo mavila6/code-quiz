@@ -1,21 +1,22 @@
+/* applies to the entire body */
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 10px;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-
+/* Color scheme for the website */
 :root {
     --darkPurple: rgb(53, 28, 117);
     --lightPurple: rgb(189, 96, 231);
     --lightGrey: rgb(187, 186, 186);
 }
-
+/* sets font color and line height for the page */
 body {
     color: black;
     line-height: 1.7;
 }
-
+/* positions header at the top of page and places space between items in the header */
 header {
     padding: 10px 25px 15px;
     display: flex;
@@ -26,16 +27,16 @@ header {
     top: 0;
     z-index: 1;
 }
-
+/* adds style to anchor in header */
 header a {
     text-decoration: none;
     color: var(--lightPurple);
 }
-
+/* makes p element in header bold */
 header p {
     font-weight: bold;
 }
-
+/* positions items in main section of body */
 main {
     display: flex;
     justify-content: center;
@@ -43,20 +44,20 @@ main {
     text-align: center;
     flex-wrap: wrap;
 }
-
+/* adds padding to sections in main */
 main section {
     padding: 15px 120px; 
 }
-
+/* styles font for headings in each sectionin main */
 main section h1 {
     font-size: 30px;
     font-weight: bolder;
 }
-
+/* styles font for p elements in each section in main */
 main section p {
     font-size: 17px;
 }
-
+/* styles the button elements in each section of main */
 main section button {
     background-color: var(--darkPurple);
     color: white;
@@ -65,22 +66,22 @@ main section button {
     padding: 8px 18px;
     margin-top: 5px;
 }
-
+/* changes button color upon hover */
 main section button:hover {
     background-color: var(--lightPurple);
 }
-
+/* changes button font color upon click */
 main section button:active {
     color: black;
 }
-
+/* positions the form inside the sections of main */
 main section form {
     display: flex;
     flex-wrap: wrap;
     padding: 5px 0 0;
     align-items: center;
 }
-
+/* styles the input element in the form */
 main section form input {
     padding: 0 15px;
     font-size: 20px;
@@ -89,29 +90,29 @@ main section form input {
     height: 45px;
     border: solid var(--lightGrey);
 }
-
+/* hides element with game over class */
 .gameOver {
     display: none;
 }
-
+/* displays the intro section */
 .intro {
     display: block;
 }
-
+/* positions and hides the section with the class of quiz */
 .quiz {
     display: none;
     padding:0 5px 0 75px;
     width: 75%;
     text-align: start;
 }
-
+/* styles the question elememt */
 .question{
     font-size: 25px;
     margin-bottom: 15px;
     width: 100%;
     padding: 0;
 }
-
+/* styles elements with class of btn */
 .btn {
     width: 25%;
     height: auto;
@@ -121,33 +122,33 @@ main section form input {
     margin-bottom: 7.5px;
     font-size: 20px;
 }
-
+/* adds style to the elements with answer class */
 .answer {
     width: 100%;
     padding: 0 0 0 10px;
 }
-
+/* adds style to the dicplay messages  */
 .prompt {
     width: 100%;
     text-align: start;
     display: block;
 }
-
+/* hides correct message until needed */
 .good {
     display: none;
 }
-
+/*  hides wrong message until needed */
 .bad {
     display: none;
 }
-
+/* adds styles to both elements with good and bad classes */
 .good, .bad {
     border-top: solid var(--lightGrey);
     padding: 5px 0 0 25px;
     color: var(--lightGrey);
     font-size: 25px;
 }
-
+/* hides and positions section with the game over page */
 .results {
     display: none;
     text-align: start;
@@ -155,42 +156,47 @@ main section form input {
     width: 65%;
     line-height: 1.7;
 }
-
+/* styles element with class done */
 .done {
     font-size: 40px;
     padding-bottom: 0;
 }
-
+/* changes font sixe of classes score and enter */
 .score, .enter {
     font-size: 24px;
 }
-
+/* determines font for submit button */
 .submit {
     font-size: 20px;
 }
-
+/* styles the highscores section of second html page */
 .highScores {
     display: block;
     text-align: start;
     padding: 5% 15% 2%;
 }
-
+/*  styles the leaderboard elements that are dynamically generated */
 .leaderboard {
     border-radius: 5px;
     width: 100%;
     background-color: rgb(214, 202, 221);
 }
-
+/* sets position of clear button */
 .clearScore {
     display: flex;
     justify-content: start;
     padding: 10px 0 10px 0;
 }
-
+/* sets margin for back button */
 .back {
     margin-right: 10px;
 }
-
+/* removes padding from left side of section container with the id of topScores */
 #topScores {
     padding-left: 0;
 }
+
+/* Media Queries */
+/* Plan to add media queries in the future but styles above satisfy the requirements for the challenge assignment */
+/* Attempted to duplicate the stylimg of the example provided */ 
+/* For best view of the quiz open in screens of min-width: 1474 */
