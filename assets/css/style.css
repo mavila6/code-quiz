@@ -190,3 +190,7 @@ main section form input {
 .back {
     margin-right: 10px;
 }
+
+#topScores {
+    padding-left: 0;
+}
