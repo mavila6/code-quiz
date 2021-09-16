@@ -38,6 +38,8 @@ A timed quiz on JavaScript fundamentals that stores high scores so that develope
 
 - Collaborated with [Kama Castaneda](https://github.com/kamacasta) to complete this challenge.
 
+- For best view of the quiz open in screens of min-width: 1474.
+
 ### Questions
 
 If you have any questions feel free to take a look at my [GitHub](https://github.com/mavila6) or contact me at mavila6@email.arizona.edu
