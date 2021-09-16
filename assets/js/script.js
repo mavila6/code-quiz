@@ -77,6 +77,7 @@ function checkAnswer(event) {
         wrong.setAttribute('style', 'display: none');
         correct.setAttribute('style', 'display: block');
     } else {
+        //removes 10 seconds from remaining time if answer chosen is incorrect
         correct.setAttribute('style', 'display: none');
         wrong.setAttribute('style', 'display: block');
         timeLeft -= 10;
